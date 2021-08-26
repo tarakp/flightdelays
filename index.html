@@ -1,34 +1,200 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
   <head>
-    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <title>Tucson Airport Flight Delays</title>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-    <!-- Style Sheet -->
-    <link rel="stylesheet" href="./static/css/styles.css">
-
-    <title>Flight Delays</title>
-
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+      href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css ">
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+      <link rel="stylesheet"  href="static/css/bootstrap (2).css">
   </head>
 
   <body>
-    
-    <h1>Hello!</h1>
-    <h2>Flight Delays</h2>
 
-    <div class='tableauPlaceholder' id='viz1629989283014' style='position: relative'><noscript><a href='#'><img alt='Interactive Flight Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Project_TAP&#47;InteractiveFlightAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Final_Project_TAP&#47;InteractiveFlightAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Project_TAP&#47;InteractiveFlightAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629989283014');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <nav class="navbar navbar-light bg-white  navbar-expand-md">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarNav0" aria-controls="navbarNav0"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav0">
+          <ul class="navbar-nav me-auto ms-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="summary.html">Summary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="details.html">Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="routes.html">Routes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modeling.html">Disruption Modeling</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
+    <section class="bg-light pt-5 pb-5">
+      <div class="container pb-5">
+        <div class="row justify-content-center d-flex">
+          <div class="col-xs-12 col-md-10 align-self-center">
+            <h1 class="display-4 text-center  mb-3 mt-5">Tucson Airport Flight Delays</h1>
+            <h4 class="text-center">U of A Data Analytics Bootcamp Final Group Project</h4>
+            <p class="lead  text-center">Nicole Lund • Anne Niemiec • Tarak Patel • Amber Royster</p>
+            <div class="justify-content-center d-flex mt-3 mb-1">
+              <a class="btn btn-outline-primary  btn-lg   mt-md-3 me-2" href="summary.html"
+                role="button">Visualizations</a>
+              <a class="btn btn-outline-secondary  btn-lg   mt-md-3 ml-md-3"
+                href="modeling.html" role="button">Modeling</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h1>Overview</h1>
+          </div>
+        </div>
+        <div class="row pt-4">
+          <div class="col-md-4">
+            <img alt="image" class="img-fluid rounded mt-1 mb-2" 
+              src="https://apr02.b-cdn.net/images/social/flight-delay.jpg">
+            <h5>Problem</h5>
+            <p class="text-h3">Employees with frequent business travel experience time lost with family and productive work time while in transit. In order to minimize lost time, 2017 flight history departing from Tucson International Airport (TUS) was used to build a model to predict which routes wuold experience the least disruptions in 2018.</p>
+          </div>
+          <div class="col-md-4">
+            <img alt="image" class="img-fluid rounded mt-1 mb-2" max-width="100%" height="auto" src="https://2s7gjr373w3x22jf92z99mgm5w-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/digital_data_shutterstock_Titima-Ongkantong-1024x681.jpg">
+            <h5>Source Data</h5>
+            <p class="text-h3">The <b>Kaggle dataset</b> provides flight performance data for each year between 2009 and 2018. The full data set requires 7.1 Gb of storage space. For the purpose of this project, we examined 2017 and 2018 data.
+              <a href="https://www.kaggle.com/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018">See data</a>
+            </p>
+            <p><b>airport_codes.csv</b> provides a lookup table of airport codes to city name. <a href="https://www.transportation.gov/policy/aviation-policy/airport-codes-txt">See data</a></p>
+          </div>
+          <div class="col-md-4">
+            <img alt="image" class="img-fluid rounded mt-1 mb-2"
+              src="https://blog.projectmanagementacademy.net/hubfs/Managing%20Project%20Scope.jpg">
+            <h5>Scope Management</h5>
+            <p class="text-h3">The 2017 data was used to train and test machine learning models and the 2018 data was used to create flight delay time predictions. We further restricted the data to only model and predict delay times for flights departing from Tucson International Airport (TUS).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light text-dark pt-5 pb-5">
+      <div class="container">
+        <div class="row mb-5 ">
+          <div class="col-12 text-center">
+          </div>
+        </div>
+        <div class="row text-center justify-content-sm-center no-gutters">
+          <div class="col-12  col-md-3 m-auto">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <i class="bi bi-star-fill fa-2x mb-3 mt-3 text-primary"
+                  aria-hidden="true"></i>
+                <h3 class="mt-2 mb-3">Summary</h3>
+                <p>Scorecard highlighting the 2018 TUS Flights by Day, Delays (Day of Week, Minutes, Destinations and Carrier), and Cancellations.</p>
+                <p class="mt-4">
+                  <a href="summary.html">Read More &gt;</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-3 m-auto">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <i class="bi bi-bullseye fa-2x mb-3 mt-3 text-primary"
+                  aria-hidden="true"></i>
+                <h3 class="mt-2 mb-3">Details</h3>
+                <p>Interactive analysis of Tuscon International Airport (TUS) flights in 2018. Drill down by month, day of month, and destination airport to show which hours have the least delays.
+                </p>
+                <p class="mt-4">
+                  <a href="details.html">Read More &gt;</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-3 m-auto">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <i class="bi bi-arrow-right-square-fill fa-2x mb-3 mt-3 text-primary"
+                  aria-hidden="true"></i>
+                <h3 class="mt-2 mb-3">Routes</h3>
+                <p>Visualizing flight delay data by route of flights originating from Tucson International Aiport (TUS) in 2018.</p>
+                <p class="mt-4">
+                  <a href="routes.html">Read More &gt;</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-3 m-auto">
+            <div class="card shadow-sm h-100">
+              <div class="card-body">
+                <i class="bi bi-bricks fa-2x mb-3 mt-3 text-primary"
+                  aria-hidden="true"></i>
+                <h3 class="mt-2 mb-3">Disruption Modeling</h3>
+                <p>Building a predictive model for flight disruptions originating from Tucson International Airport (TUS) in 2018.</p>
+                <p class="mt-4">
+                  <a href="modeling.html">Read More &gt;</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="">
+      <footer class="pt-4 pb-4  bg-light">
+        <div class="container">
+          <div class="row text-center align-items-center">
+            <div class="col">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/nicolelund-1/" target="_blank"><i class="bi bi-linkedin" aria-hidden="true"></i>&nbsp;Nicole Lund</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/anne-niemiec/" target="_blank"><i class="bi bi-linkedin" aria-hidden="true"></i>&nbsp;Anne Niemiec</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/tarakpatel-1/" target="_blank"><i class="bi bi-linkedin" aria-hidden="true"></i>&nbsp;Tarak Patel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/amber-royster/" target="_blank"><i class="bi bi-linkedin" aria-hidden="true"></i>&nbsp;Amber Royster</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy"
+      crossorigin="anonymous"></script>
 
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
   </body>
+
 </html>
