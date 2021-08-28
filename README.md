@@ -35,7 +35,7 @@ The 2018 TUS flight information was analyzed to investigate if there were intere
 ![flight details](images/FlightDetails.png)
 <a href="https://public.tableau.com/views/Final_Project_TAP/InteractiveFlightAnalysis?:language=en-US&:retry=yes&:display_count=n&:origin=viz_share_link" target="_blank">Tarak Patel's Flight Details Tableau Workbook</a>
 
-* In general, the number of delays and the average duration of delays associated with ATL and DFW destinations are not severely impacted by observed issued noted previously.
+* In general, the number of delays and the average duration of delays associated with ATL and DFW destinations are not severely impacted by observed issues noted previously.
 ![flight routes](images/FlightRoutes.png)
 <a href="https://public.tableau.com/shared/P7N4TGYTN?:display_count=n&:origin=viz_share_link" target="_blank">Amber Royster's Flight Routes Tableau Workbook</a>
 
@@ -56,7 +56,7 @@ Several machine learning models were deployed and tuned with the same input/outp
 * DIVERTED: flight diverted [0 = No, 1 = Yes]
 * DELAY: flight ARR_DELAY greater than 30 minutes [0 = No, 1 = Yes]
 
-The Random Forest Classifier model was hyper-parameter tuned and then trained with 2017 training data using n_estimators=5000 and max_features= 'sqrt'.  The was scored against 2017 test data. The model's precision score for predicting delayed flights was below that which the team determined would be suitable for the defined use case.
+The Random Forest Classifier model was hyper-parameter tuned and then trained with 2017 training data using n_estimators=5000 and max_features= 'sqrt'.  This was scored against 2017 test data. The model's precision score for predicting delayed flights was below that which the team determined would be suitable for the defined use case.
 
 ![2017 model results](images/random_forest_model_2017_test_results.png)
 
