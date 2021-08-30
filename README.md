@@ -17,7 +17,7 @@ Employees with frequent business travel experience time lost with family and pro
 ## Webpage
 The project webpage contains detailed discussions and dashboards about the data investigation and modeling.
 
-<a href="https://nicolelund.github.io/flight_delay_prediction/" target="_blank">https://nicolelund.github.io/flight_delay_prediction/</a>
+<a href="https://tarakp.github.io/flightdelays/" target="_blank">https://tarakp.github.io/flightdelays/</a>
 
 ## Project Highlights
 
